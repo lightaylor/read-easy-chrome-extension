@@ -7,7 +7,7 @@
     "default_icon": "icons/icon.png",
     "default_title": "Boldify"
   },
-  "permissions": ["scripting", "activeTab", "storage"],
+  "permissions": ["activeTab", "storage"],
   "background": { "service_worker": "background.js" },
   "content_scripts": [
     { "matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle" }
