@@ -12,6 +12,9 @@ It improves readability and makes scanning text easier.
 
 
 ## 📦 Installation
+
+[**Install from Chrome Web Store**](https://chromewebstore.google.com/detail/bnhfmohhdifemioldomlbfokggfhimpo?utm_source=item-share-cb)
+
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/TaeGyeong115/boldify-chrome-extension.git
