@@ -1,10 +1,13 @@
 # Boldify - Chrome Extension
 
+> ✨ **Boldify** is a simple, lightweight Chrome extension designed to improve readability.
+
 **Boldify** is a Chrome extension that **automatically bolds the first letter of every word** on any webpage.  
 It improves readability and makes scanning text easier.
 
 
 ## ✨ Features
+
 - Automatically bolds the first letter of each word on every webpage
 - Toggle **ON/OFF** with a single click on the extension icon
 - Lightweight and fast
@@ -26,13 +29,12 @@ It improves readability and makes scanning text easier.
 
 
 ## 🔧 Usage
+
 - Click the **extension icon** on any webpage to toggle Boldify on or off.
 - When enabled, the badge will display **ON**.
 
 
 ## 📄 License
+
 This project is licensed under the **MIT License**.  
 All icons and code are **AI-generated or self-made** and are free to use.
-
-
-> ✨ **Boldify** is a simple, lightweight Chrome extension designed to improve readability.
