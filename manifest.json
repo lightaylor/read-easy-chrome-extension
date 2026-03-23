@@ -1,13 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Boldify",
-  "version": "1.0.0",
-  "description": "Boldify: Toggle bold styling for the first letter of every word on any webpage.",
+  "name": "ReadEasy",
+  "version": "1.1.0",
+  "description": "ReadEasy: Improve readability by adjusting bold, letter spacing, and line height on any webpage.",
   "action": {
     "default_icon": "icons/icon.png",
-    "default_title": "Boldify"
+    "default_title": "ReadEasy",
+    "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "tabs", "scripting"],
   "background": { "service_worker": "background.js" },
   "content_scripts": [
     { "matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle" }

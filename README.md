@@ -1,40 +1,37 @@
-# Boldify - Chrome Extension
+# ReadEasy - Chrome Extension
 
-> ✨ **Boldify** is a simple, lightweight Chrome extension designed to improve readability.
+> **ReadEasy** is a lightweight Chrome extension that improves webpage readability through customizable text styling.
 
-**Boldify** is a Chrome extension that **automatically bolds the first letter of every word** on any webpage.  
-It improves readability and makes scanning text easier.
+## Features
 
-
-## ✨ Features
-
-- Automatically bolds the first letter of each word on every webpage
-- Toggle **ON/OFF** with a single click on the extension icon
-- Lightweight and fast
-- Open-source and free to use
+- **Bold First Letter** — automatically bolds the first letter of every word
+- **Letter Spacing** — adjust the spacing between characters (px)
+- **Line Height** — adjust the line height (em)
+- **Font Scale** — scale the page font size proportionally (%)
+- Settings persist across tabs and windows
+- Toggle all settings **ON/OFF** with a single switch
 
 
-## 📦 Installation
-
-[**Install from Chrome Web Store**](https://chromewebstore.google.com/detail/bnhfmohhdifemioldomlbfokggfhimpo?utm_source=item-share-cb)
+## Installation
 
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/TaeGyeong115/boldify-chrome-extension.git
    ```
-2. Open `chrome://extensions` in your Chrome browser.
+2. Open `chrome://extensions` in Chrome.
 3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the project folder to install.
+4. Click **Load unpacked** and select the project folder.
 
 
-## 🔧 Usage
+## Usage
 
-- Click the **extension icon** on any webpage to toggle Boldify on or off.
-- When enabled, the badge will display **ON**.
+1. Click the **ReadEasy** extension icon to open the popup.
+2. Configure your preferred settings (bold, spacing, line height, font scale).
+3. Toggle the **ON / OFF** switch to apply or revert all settings at once.
+4. When enabled, the extension badge displays **ON**.
 
 
-## 📄 License
+## License
 
-This project is licensed under the **MIT License**.  
-All icons and code are **AI-generated or self-made** and are free to use.
+This project is licensed under the **MIT License**.
+All icons and code are AI-generated or self-made and are free to use.

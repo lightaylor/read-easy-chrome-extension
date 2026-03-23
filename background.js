@@ -1,15 +1,20 @@
-const key = (tabId) => `tab-${tabId}`;
+const DEFAULT_SETTINGS = { bold: false, spacing: 0, lineHeight: 1.5, fontSize: 16 };
 
-chrome.action.onClicked.addListener(async (tab) => {
-    if (!tab?.id) return;
+async function applyToTab(tabId) {
+    const store = await chrome.storage.local.get(['global-enabled', 'global-settings']);
+    if (!store['global-enabled']) return;
+    const settings = store['global-settings'] ?? DEFAULT_SETTINGS;
+    try {
+        await chrome.tabs.sendMessage(tabId, { type: 'APPLY_ALL', settings });
+    } catch {
+        // Tab doesn't have content script (e.g. chrome:// pages)
+    }
+}
 
-    const store = await chrome.storage.local.get(key(tab.id));
-    const enabled = !store[key(tab.id)];
+// Apply settings when switching to an existing tab
+chrome.tabs.onActivated.addListener(({ tabId }) => applyToTab(tabId));
 
-    await chrome.storage.local.set({[key(tab.id)]: enabled});
-
-    await chrome.action.setBadgeText({tabId: tab.id, text: enabled ? "ON" : ""});
-    await chrome.action.setBadgeBackgroundColor({tabId: tab.id, color: "#000"});
-
-    chrome.tabs.sendMessage(tab.id, {type: enabled ? "APPLY" : "REVERT"});
+// Apply settings when a tab finishes loading (handles navigation within a tab)
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+    if (changeInfo.status === 'complete') applyToTab(tabId);
 });
