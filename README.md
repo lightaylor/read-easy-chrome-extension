@@ -18,7 +18,7 @@
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/TaeGyeong115/boldify-chrome-extension.git
+   git clone https://github.com/lightaylor/read-easy-chrome-extension.git
    ```
 2. Open `chrome://extensions` in Chrome.
 3. Enable **Developer mode**.
